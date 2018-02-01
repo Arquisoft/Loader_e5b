@@ -13,6 +13,18 @@ Herminio García González (@herminiogg)
 
 Jose Emilio Labra Gayo (@labra)
 
+# 2017-2018
+
+Mateo Juarez Verdugo (@UO251123)
+
+Manuel Mori Álvarez (@ManuelMori)
+
+Javier Gonzalez Fernandez (@UO245020)
+
+Marcos Machado Menéndez (@UO238688)
+
+# 2016-2017
+
 Daniel Bermejo Blanco (@UO204115)
 
 Pedro Fernández Álvarez (@UO244928)
