@@ -18,6 +18,7 @@ public class Application {
 			e.printStackTrace();
 		}
 	}
+	
 
 	public void run(String formato, String filePath) throws IOException,
 			BusinessException {
