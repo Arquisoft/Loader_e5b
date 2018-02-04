@@ -13,13 +13,13 @@ import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-import es.uniovi.asw.model.Citizen;
+import es.uniovi.asw.model.Agent;
 
 public class ExcelCitizensReader implements CitizensReader {
 
 	@Override
-	public List<Citizen> readCitizens(String filePath) throws IOException {
-		List<Citizen> citizens = new ArrayList<Citizen>();
+	public List<Agent> readCitizens(String filePath) throws IOException {
+		List<Agent> citizens = new ArrayList<Agent>();
 		File file = new File(filePath);
 		FileInputStream inputStream = new FileInputStream(file);
 
@@ -31,7 +31,7 @@ public class ExcelCitizensReader implements CitizensReader {
 		while (iterator.hasNext()) {
 			Row nextRow = iterator.next();
 			Iterator<Cell> cellIterator = nextRow.cellIterator();
-			Citizen citizen = new Citizen();
+			Agent agent = new Agent();
 
 			while (cellIterator.hasNext()) {
 				Cell nextCell = cellIterator.next();
@@ -39,33 +39,26 @@ public class ExcelCitizensReader implements CitizensReader {
 
 				switch (columnIndex) {
 				case 0:
-					citizen.setNombre(nextCell.getStringCellValue());
+					agent.setNombre(nextCell.getStringCellValue());
 					break;
 				case 1:
-					citizen.setApellidos(nextCell.getStringCellValue());
+					agent.setLocalizacion(nextCell.getStringCellValue());
 					break;
 				case 2:
-					citizen.setEmail(nextCell.getStringCellValue());
+					agent.setEmail(nextCell.getStringCellValue());
 					break;
 				case 3:
-					citizen.setFechaNacimiento(nextCell.getDateCellValue());
+					agent.setId(String.valueOf(Double.valueOf(nextCell.getNumericCellValue()).intValue()));
 					break;
 				case 4:
-					citizen.setDireccionPostal(nextCell.getStringCellValue());
-					break;
-				case 5:
-					citizen.setNacionalidad(nextCell.getStringCellValue());
-					break;
-				case 6:
-					citizen.setDni(nextCell.getStringCellValue());
+					agent.setTipo(String.valueOf(Double.valueOf(nextCell.getNumericCellValue()).intValue()));
 					break;
 				default:
 					break;
 				}
 			}
-			citizen.setNombreUsuario(citizen.getEmail());
-			citizen.setContrasena(citizen.getNombre() + "123");
-			citizens.add(citizen);
+			agent.setContrasena(agent.getNombre() + "123");
+			citizens.add(agent);
 		}
 		workbook.close();
 		inputStream.close();

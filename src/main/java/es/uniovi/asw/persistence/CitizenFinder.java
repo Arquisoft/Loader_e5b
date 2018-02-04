@@ -2,16 +2,16 @@ package es.uniovi.asw.persistence;
 
 import java.util.List;
 
-import es.uniovi.asw.model.Citizen;
+import es.uniovi.asw.model.Agent;
 import es.uniovi.asw.persistence.util.Jpa;
 
 public class CitizenFinder {
 
-	public static boolean isInDatabase(Citizen citizen) {
-		List<Citizen> lista = Jpa
+	public static boolean isInDatabase(Agent citizen) {
+		List<Agent> lista = Jpa
 				.getManager()
 				.createQuery("select c from Citizen c where c.email = ?1",
-						Citizen.class).setParameter(1, citizen.getEmail())
+						Agent.class).setParameter(1, citizen.getEmail())
 				.getResultList();
 		if (lista.size() > 0) {
 			return new Boolean(true);
@@ -20,9 +20,9 @@ public class CitizenFinder {
 		}
 	}
 
-	public static List<Citizen> findAll() {
+	public static List<Agent> findAll() {
 		return Jpa.getManager()
-				.createQuery("select c from Citizen c", Citizen.class)
+				.createQuery("select c from Citizen c", Agent.class)
 				.getResultList();
 	}
 }

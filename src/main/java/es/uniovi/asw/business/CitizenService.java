@@ -2,17 +2,17 @@ package es.uniovi.asw.business;
 
 import java.util.List;
 
-import es.uniovi.asw.model.Citizen;
+import es.uniovi.asw.model.Agent;
 import es.uniovi.asw.model.exception.*;
 
 public interface CitizenService {
 
-	void insertCitizen(Citizen citizen) throws BusinessException;
+	void insertCitizen(Agent citizen) throws BusinessException;
 
-	boolean isCitizenInDatabase(Citizen citizen) throws BusinessException;
+	boolean isCitizenInDatabase(Agent citizen) throws BusinessException;
 	
-	List<Citizen> findAllCitizens() throws BusinessException;
+	List<Agent> findAllCitizens() throws BusinessException;
 
-	void deleteAllCitizens(List<Citizen> citizens) throws BusinessException;
+	void deleteAllCitizens(List<Agent> citizens) throws BusinessException;
 	
 }

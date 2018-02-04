@@ -6,9 +6,9 @@ import es.uniovi.asw.persistence.util.Jpa;
 
 public class AddCitizen implements Command {
 
-	private Citizen citizen;
+	private Agent citizen;
 
-	public AddCitizen(Citizen citizen) {
+	public AddCitizen(Agent citizen) {
 		this.citizen = citizen;
 	}
 

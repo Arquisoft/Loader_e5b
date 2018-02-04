@@ -3,42 +3,34 @@ package es.uniovi.asw.parser.reader;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
-import es.uniovi.asw.model.Citizen;
+import es.uniovi.asw.model.Agent;
 
 public class TextCitizensReader implements CitizensReader {
 
 	@Override
-	public List<Citizen> readCitizens(String filePath) throws IOException {
+	public List<Agent> readCitizens(String filePath) throws IOException {
 		String linea = "";
-		String[] datosCitizen = null;
-		List<Citizen> newCitizens = new ArrayList<Citizen>();
+		String[] datosAgent = null;
+		List<Agent> newCitizens = new ArrayList<Agent>();
 		try {
 			BufferedReader fichero = new BufferedReader(
 					new FileReader(filePath));
 			while (fichero.ready()) {
 				linea = fichero.readLine();
-				datosCitizen = linea.split(";");
-				DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
-				Date fechaNacimiento = dateFormat.parse(datosCitizen[3]);
-				Citizen citizen = new Citizen(datosCitizen[0], datosCitizen[1],
-						datosCitizen[2], fechaNacimiento, datosCitizen[4],
-						datosCitizen[5], datosCitizen[6]);
-				// De momento el nombre de usuario es su email
-				citizen.setNombreUsuario(citizen.getEmail());
+				datosAgent = linea.split(";");
+				
+				Agent agent = new Agent(datosAgent[3],datosAgent[0],datosAgent[1],
+						datosAgent[2],datosAgent[4]);
 				// Y su contraseña es nombre + 123
-				citizen.setContrasena(citizen.getNombre() + "123");
-				newCitizens.add(citizen);
+				agent.setContrasena(agent.getNombre() + "123");
+				newCitizens.add(agent);
 			}
 			fichero.close();
-		} catch (ParseException pe) {
-			System.out.println("Conversión de fecha errónea");
+		} catch (Exception e) {
+			System.err.println("Error al parsear desde txt");
 		}
 		return newCitizens;
 	}

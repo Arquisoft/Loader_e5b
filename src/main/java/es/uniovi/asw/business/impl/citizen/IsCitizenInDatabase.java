@@ -1,14 +1,14 @@
 package es.uniovi.asw.business.impl.citizen;
 
 import es.uniovi.asw.business.impl.Command;
-import es.uniovi.asw.model.Citizen;
+import es.uniovi.asw.model.Agent;
 import es.uniovi.asw.persistence.CitizenFinder;
 
 public class IsCitizenInDatabase implements Command {
 
-	private Citizen citizen;
+	private Agent citizen;
 
-	public IsCitizenInDatabase(Citizen citizen) {
+	public IsCitizenInDatabase(Agent citizen) {
 		this.citizen = citizen;
 	}
 

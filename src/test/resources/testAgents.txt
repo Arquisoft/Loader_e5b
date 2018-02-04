@@ -1,0 +1,7 @@
+Juan Torres Pardo;0 1;juan@example.com;0;1
+Luis López Fernando;0 2;luis@example.com;1;1
+Ana Torres Pardo;;ana@example.com;2;1
+Entidad 01;0 1;E1@example.com;3;2
+Entidad 02;;E2@example.com;4;2
+Sensor 01;2 1;S1@example.com;5;3
+Sensor 02;3 0;S2@example.com;6;3

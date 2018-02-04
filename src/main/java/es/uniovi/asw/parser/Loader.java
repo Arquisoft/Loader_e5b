@@ -5,7 +5,7 @@ import java.util.List;
 
 import es.uniovi.asw.business.CitizenService;
 import es.uniovi.asw.conf.ServicesFactory;
-import es.uniovi.asw.model.Citizen;
+import es.uniovi.asw.model.Agent;
 import es.uniovi.asw.model.exception.BusinessException;
 import es.uniovi.asw.parser.emailWriter.EmailWriter;
 import es.uniovi.asw.parser.emailWriter.TxtEmailWriter;
@@ -26,36 +26,36 @@ public class Loader {
 
 	public void readList() throws IOException, BusinessException {
 		
-		List<Citizen> citizens = readCitizens(formato, filePath);
+		List<Agent> citizens = readCitizens(formato, filePath);
 
 		CitizenService citizenService = ServicesFactory.getCitizenService();
 
 		printCitizens(citizens, filePath);
 
-		for (Citizen citizen : citizens) {
+		for (Agent citizen : citizens) {
 			if (!citizenService.isCitizenInDatabase(citizen)) {
 				sendEmail(citizen, new TxtEmailWriter());
 				citizenService.insertCitizen(citizen);
 			} else {
-				String mensaje = "El usuario " + citizen.getNombreUsuario()
+				String mensaje = "El usuario " + citizen.getId()
 						+ " ya está registrado.";
 				LogWriter.write(mensaje);
 			}
 		}
 	}
 
-	public List<Citizen> readCitizens(String formato, String filePath) throws IOException {
+	public List<Agent> readCitizens(String formato, String filePath) throws IOException {
 		return getReader(formato).readCitizens(filePath);
 	}
 
-	private void sendEmail(Citizen citizen, EmailWriter... writers)
+	private void sendEmail(Agent citizen, EmailWriter... writers)
 			throws IOException {
 		String email = "To "
 				+ citizen.getEmail()
 				+ ":\nSaludos "
 				+ citizen.getNombre()
 				+ ", le informamos de que ha sido registrado correctamente en el sistema de participación ciudadana.\nSu nombre de usuario es: "
-				+ citizen.getNombreUsuario();
+				+ citizen.getId();
 		for (EmailWriter writer : writers) {
 			writer.write(email);
 		}
@@ -84,10 +84,10 @@ public class Loader {
 	
 	
 	
-	private void printCitizens(List<Citizen> citizens, String filePath) {
+	private void printCitizens(List<Agent> citizens, String filePath) {
 		System.out.println("Estos son los usuarios presentes en el fichero "
 				+ filePath + ":");
-		for (Citizen citizen : citizens) {
+		for (Agent citizen : citizens) {
 			System.out.println(citizen);
 		}
 	}
