@@ -19,7 +19,7 @@ public class DeleteAllAgents implements Command {
 	public Object execute() throws BusinessException {
 
 		for (Agent agent : agents) {
-			Agent agentPersistent = Jpa.getManager().find(Agent.class, agent.getId());
+			Agent agentPersistent = Jpa.getManager().find(Agent.class, agent.getIdentificador());
 			Jpa.getManager().remove(agentPersistent);
 		}
 

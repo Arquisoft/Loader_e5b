@@ -48,7 +48,7 @@ public class ExcelAgentsReader implements AgentsReader {
 					agent.setEmail(nextCell.getStringCellValue());
 					break;
 				case 3:
-					agent.setId(String.valueOf(Double.valueOf(nextCell.getNumericCellValue()).intValue()));
+					agent.setIdentificador(String.valueOf(Double.valueOf(nextCell.getNumericCellValue()).intValue()));
 					break;
 				case 4:
 					agent.setTipo(String.valueOf(Double.valueOf(nextCell.getNumericCellValue()).intValue()));

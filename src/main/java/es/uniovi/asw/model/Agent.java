@@ -7,8 +7,8 @@ import javax.persistence.*;
 public class Agent {
 
 	@Id
-	@Column(name = "ID")
-	private String id;
+	@Column(name = "IDENTIFICADOR")
+	private String identificador;
 
 	@Column(name = "NOMBRE")
 	private String nombre;
@@ -29,9 +29,9 @@ public class Agent {
 	public Agent() {
 	}
 
-	public Agent(String ID, String nombre, String localizacion, String email, String tipo, String contrasena) {
+	public Agent(String identificador, String nombre, String localizacion, String email, String tipo, String contrasena) {
 		super();
-		this.id = ID;
+		this.identificador = identificador;
 		this.nombre = nombre;
 		this.localizacion = localizacion;
 		this.email = email;
@@ -39,21 +39,21 @@ public class Agent {
 		this.contrasena = contrasena;
 	}
 
-	public Agent(String ID, String nombre, String localizacion, String email, String tipo) {
+	public Agent(String identificador, String nombre, String localizacion, String email, String tipo) {
 		super();
-		this.id = ID;
+		this.identificador = identificador;
 		this.nombre = nombre;
 		this.localizacion = localizacion;
 		this.email = email;
 		this.tipo = tipo;
 	}
 	
-	public void setId(String id){
-		this.id = id;
+	public void setIdentificador(String identificador){
+		this.identificador = identificador;
 	}
 	
-	public String getId() {
-		return id;
+	public String getIdentificador() {
+		return identificador;
 	}
 
 	public void setContrasena(String contrasena) {
@@ -100,7 +100,7 @@ public class Agent {
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((id == null) ? 0 : id.hashCode());
+		result = prime * result + ((identificador == null) ? 0 : identificador.hashCode());
 		return result;
 	}
 
@@ -113,17 +113,17 @@ public class Agent {
 		if (getClass() != obj.getClass())
 			return false;
 		Agent other = (Agent) obj;
-		if (id == null) {
-			if (other.id != null)
+		if (identificador == null) {
+			if (other.identificador != null)
 				return false;
-		} else if (!id.equals(other.id))
+		} else if (!identificador.equals(other.identificador))
 			return false;
 		return true;
 	}
 
 	@Override
 	public String toString() {
-		return "Agent [id=" + id
+		return "Agent [identificador=" + identificador
 				+ ", nombre=" + nombre
 				+ ", localizacion=" + localizacion
 				+ ", email=" + email

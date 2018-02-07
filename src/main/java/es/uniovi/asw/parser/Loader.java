@@ -37,7 +37,7 @@ public class Loader {
 				sendEmail(agent, new TxtEmailWriter());
 				agentService.insertAgent(agent);
 			} else {
-				String mensaje = "El usuario " + agent.getId()
+				String mensaje = "El usuario " + agent.getIdentificador()
 						+ " ya está registrado.";
 				LogWriter.write(mensaje);
 			}
@@ -55,7 +55,7 @@ public class Loader {
 				+ ":\nSaludos "
 				+ agent.getNombre()
 				+ ", le informamos de que ha sido registrado correctamente en el sistema de participación ciudadana.\nSu nombre de usuario es: "
-				+ agent.getId();
+				+ agent.getIdentificador();
 		for (EmailWriter writer : writers) {
 			writer.write(email);
 		}
