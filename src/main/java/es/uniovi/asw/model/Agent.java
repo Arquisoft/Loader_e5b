@@ -2,6 +2,9 @@ package es.uniovi.asw.model;
 
 import javax.persistence.*;
 
+import es.uniovi.asw.model.util.Type;
+import es.uniovi.asw.parser.reader.CSVReader;
+
 @Entity
 @Table(name = "TAGENTS")
 public class Agent {
@@ -24,6 +27,8 @@ public class Agent {
 
 	@Column(name = "CONTRASENA")
 	private String contrasena;
+	
+	private String tipoNombre;
 
 	// Constructor vacio para JPA
 	public Agent() {
@@ -36,6 +41,7 @@ public class Agent {
 		this.localizacion = localizacion;
 		this.email = email;
 		this.tipo = tipo;
+		this.tipoNombre = tipo;
 		this.contrasena = contrasena;
 	}
 
@@ -46,6 +52,7 @@ public class Agent {
 		this.localizacion = localizacion;
 		this.email = email;
 		this.tipo = tipo;
+		this.tipoNombre = tipo;
 	}
 	
 	public void setId(String id){
@@ -95,6 +102,18 @@ public class Agent {
 	public String getTipo(){
 		return this.tipo;
 	}
+	
+	public void setTipoNombre(String tipoNombre){
+		this.tipoNombre = tipoNombre;
+	}
+	
+	public String getTipoNombre(String path){
+		Type tipo= new Type(path);
+		this.tipoNombre=tipo.getNombre(this.tipo);
+		return this.tipoNombre;
+	}
+	
+	
 
 	@Override
 	public int hashCode() {

@@ -9,9 +9,9 @@ import es.uniovi.asw.model.Agent;
 import es.uniovi.asw.model.exception.BusinessException;
 import es.uniovi.asw.parser.emailWriter.EmailWriter;
 import es.uniovi.asw.parser.emailWriter.TxtEmailWriter;
-import es.uniovi.asw.parser.reader.CitizensReader;
-import es.uniovi.asw.parser.reader.ExcelCitizensReader;
-import es.uniovi.asw.parser.reader.TextCitizensReader;
+import es.uniovi.asw.parser.reader.AgentsReader;
+import es.uniovi.asw.parser.reader.ExcelAgentsReader;
+import es.uniovi.asw.parser.reader.TextAgentsReader;
 import es.uniovi.asw.reportWriter.LogWriter;
 
 public class Loader {
@@ -65,11 +65,11 @@ public class Loader {
 	/**
 	 * Crea y devuelve el reader adecuado
 	 */
-	private CitizensReader getReader(String formato) {
+	private AgentsReader getReader(String formato) {
 		if ("excel".equals(formato)) {
-			return new ExcelCitizensReader();
+			return new ExcelAgentsReader();
 		} else if ("texto".equals(formato)) {
-			return new TextCitizensReader();
+			return new TextAgentsReader();
 		}
 		return null;
 	}
