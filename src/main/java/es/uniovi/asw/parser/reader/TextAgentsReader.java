@@ -12,7 +12,7 @@ import es.uniovi.asw.model.Agent;
 public class TextAgentsReader implements AgentsReader {
 
 	@Override
-	public List<Agent> readCitizens(String filePath) throws IOException {
+	public List<Agent> readAgents(String filePath) throws IOException {
 		String linea = "";
 		String[] datosAgent = null;
 		List<Agent> newCitizens = new ArrayList<Agent>();

@@ -7,6 +7,6 @@ import es.uniovi.asw.model.Agent;
 
 public interface AgentsReader {
 
-	List<Agent> readCitizens(String filePath) throws IOException;
+	List<Agent> readAgents(String filePath) throws IOException;
 
 }
