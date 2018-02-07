@@ -3,7 +3,7 @@ package es.uniovi.asw.model;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "TAGENTS")
+@Table(name = "AGENT")
 public class Agent {
 
 	@Id

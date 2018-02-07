@@ -2,11 +2,10 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>es.uniovi.asw</groupId>
-	<artifactId>citizensLoader2a</artifactId>
+	<artifactId>Loader_e5b</artifactId>
 	<version>0.0.1</version>
-	<name>citizensLoader2a</name>
+	<name>Loader_e5b</name>
 	<packaging>jar</packaging>
-	<description>Citizens SubSystem</description>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -325,4 +324,5 @@
 		<name>University of Oviedo</name>
 		<url>http://www.uniovi.es</url>
 	</organization>
+	<description>Loader module</description>
 </project>
