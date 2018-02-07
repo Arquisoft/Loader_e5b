@@ -8,8 +8,8 @@ public class Application {
 
 	public static void main(String... args) {
 		try {
-			new Application().run((String) args[0], (String) args[1]);
-			//new Application().run("excel","src/test/resources/test.xlsx");
+			// new Application().run((String) args[0], (String) args[1]);
+			new Application().run("excel", "src/test/resources/testAgents.xlsx");
 			// Por si hay problemas con la de arriba
 			// new
 			// CitizensLoader().load("excel","src/test/resources/test.xlsx");
@@ -18,12 +18,10 @@ public class Application {
 			e.printStackTrace();
 		}
 	}
-	
 
-	public void run(String formato, String filePath) throws IOException,
-			BusinessException {
+	public void run(String formato, String filePath) throws IOException, BusinessException {
 		Loader loader = new Loader(formato, filePath);
-		loader.readList();	
+		loader.readList();
 	}
 
 }

@@ -4,11 +4,11 @@ import java.util.List;
 
 import es.uniovi.asw.business.impl.Command;
 import es.uniovi.asw.model.Agent;
-import es.uniovi.asw.persistence.CitizenFinder;
+import es.uniovi.asw.persistence.AgentFinder;
 
-public class FindAllCitizens implements Command {
+public class FindAllAgents implements Command {
 	
 	public List<Agent> execute() {
-		return CitizenFinder.findAll();	
+		return AgentFinder.findAll();	
 	}
 }

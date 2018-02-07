@@ -5,7 +5,7 @@ import java.util.List;
 import es.uniovi.asw.model.Agent;
 import es.uniovi.asw.persistence.util.Jpa;
 
-public class CitizenFinder {
+public class AgentFinder {
 
 	public static boolean isInDatabase(Agent citizen) {
 		List<Agent> lista = Jpa

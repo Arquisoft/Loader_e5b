@@ -8,13 +8,13 @@ import java.util.List;
 
 import es.uniovi.asw.model.Agent;
 
-public class TextCitizensReader implements CitizensReader {
+public class TextAgentsReader implements AgentsReader {
 
 	@Override
-	public List<Agent> readCitizens(String filePath) throws IOException {
+	public List<Agent> readAgents(String filePath) throws IOException {
 		String linea = "";
 		String[] datosAgent = null;
-		List<Agent> newCitizens = new ArrayList<Agent>();
+		List<Agent> agents = new ArrayList<Agent>();
 		try {
 			BufferedReader fichero = new BufferedReader(
 					new FileReader(filePath));
@@ -26,13 +26,13 @@ public class TextCitizensReader implements CitizensReader {
 						datosAgent[2],datosAgent[4]);
 				// Y su contraseña es nombre + 123
 				agent.setContrasena(agent.getNombre() + "123");
-				newCitizens.add(agent);
+				agents.add(agent);
 			}
 			fichero.close();
 		} catch (Exception e) {
 			System.err.println("Error al parsear desde txt");
 		}
-		return newCitizens;
+		return agents;
 	}
 
 }

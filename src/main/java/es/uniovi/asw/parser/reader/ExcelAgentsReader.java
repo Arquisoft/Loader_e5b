@@ -15,11 +15,11 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 import es.uniovi.asw.model.Agent;
 
-public class ExcelCitizensReader implements CitizensReader {
+public class ExcelAgentsReader implements AgentsReader {
 
 	@Override
-	public List<Agent> readCitizens(String filePath) throws IOException {
-		List<Agent> citizens = new ArrayList<Agent>();
+	public List<Agent> readAgents(String filePath) throws IOException {
+		List<Agent> agents = new ArrayList<Agent>();
 		File file = new File(filePath);
 		FileInputStream inputStream = new FileInputStream(file);
 
@@ -58,12 +58,12 @@ public class ExcelCitizensReader implements CitizensReader {
 				}
 			}
 			agent.setContrasena(agent.getNombre() + "123");
-			citizens.add(agent);
+			agents.add(agent);
 		}
 		workbook.close();
 		inputStream.close();
 
-		return citizens;
+		return agents;
 	}
 
 }

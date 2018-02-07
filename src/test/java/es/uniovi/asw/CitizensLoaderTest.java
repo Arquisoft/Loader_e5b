@@ -14,7 +14,7 @@ public class CitizensLoaderTest {
     public void testLoadFromTxt() throws IOException, BusinessException {
     	
     	Loader loader = new Loader("texto", "src/test/resources/testAgents.txt");
-		List<Agent> citizens = loader.readCitizens(loader.getFormato(), loader.getFilePath());
+		List<Agent> citizens = loader.readAgents(loader.getFormato(), loader.getFilePath());
 		assertEquals(7, citizens.size());
 		
 		
@@ -32,7 +32,7 @@ public class CitizensLoaderTest {
     @Test
     public void testLoadFromExcel() throws IOException, BusinessException {
 		Loader loader = new Loader("excel", "src/test/resources/testAgents.xlsx");
-		List<Agent> citizens = loader.readCitizens(loader.getFormato(), loader.getFilePath());
+		List<Agent> citizens = loader.readAgents(loader.getFormato(), loader.getFilePath());
 		assertEquals(7, citizens.size());
 		
 		

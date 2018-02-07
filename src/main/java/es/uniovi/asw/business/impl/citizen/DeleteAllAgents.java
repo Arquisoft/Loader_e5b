@@ -7,23 +7,23 @@ import es.uniovi.asw.model.Agent;
 import es.uniovi.asw.model.exception.BusinessException;
 import es.uniovi.asw.persistence.util.Jpa;
 
-public class DeleteAllCitizens implements Command {
-	
-	List<Agent> citizens;
+public class DeleteAllAgents implements Command {
 
-	public DeleteAllCitizens(List<Agent> citizens) {
-		this.citizens = citizens;
+	List<Agent> agents;
+
+	public DeleteAllAgents(List<Agent> agents) {
+		this.agents = agents;
 	}
 
 	@Override
 	public Object execute() throws BusinessException {
-		
-		for(Agent citizen : citizens) {
-			Agent citizenPersistent = Jpa.getManager().find(Agent.class, citizen.getId());
-			Jpa.getManager().remove(citizenPersistent);
+
+		for (Agent agent : agents) {
+			Agent agentPersistent = Jpa.getManager().find(Agent.class, agent.getId());
+			Jpa.getManager().remove(agentPersistent);
 		}
-		
+
 		return null;
 	}
-	
+
 }

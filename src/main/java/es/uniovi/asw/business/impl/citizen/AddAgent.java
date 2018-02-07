@@ -4,19 +4,19 @@ import es.uniovi.asw.business.impl.*;
 import es.uniovi.asw.model.*;
 import es.uniovi.asw.persistence.util.Jpa;
 
-public class AddCitizen implements Command {
+public class AddAgent implements Command {
 
-	private Agent citizen;
+	private Agent agent;
 
-	public AddCitizen(Agent citizen) {
-		this.citizen = citizen;
+	public AddAgent(Agent agent) {
+		this.agent = agent;
 	}
 
 	public Object execute() {
 		
-		Jpa.getManager().persist(citizen);
+		Jpa.getManager().persist(agent);
 		
-		return citizen;
+		return agent;
 	}
 
 }
