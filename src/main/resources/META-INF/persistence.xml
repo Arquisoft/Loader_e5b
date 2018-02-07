@@ -4,7 +4,7 @@
     http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
 	version="2.0">
 
-    <persistence-unit name="carworkshop">
+    <persistence-unit name="Loader_e5b">
         <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
         <exclude-unlisted-classes>false</exclude-unlisted-classes>
 

@@ -161,7 +161,7 @@ import javax.persistence.*;
 import es.uniovi.asw.model.util.Type;
 
 @Entity
-@Table(name = "TAGENTS")
+@Table(name = "AGENT")
 public class Agent {
 
 	@Id
