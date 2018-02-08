@@ -133,7 +133,7 @@ public class Loader {
 		for (Agent agent : agents) {
 			if (!agentService.isAgentInDatabase(agent)) {
 				sendEmail(agent, new TxtEmailWriter());
-				generarDocs(agent,new DocsWriterImpl(),new PdfWriterImpl());
+				//generarDocs(agent,new DocsWriterImpl(),new PdfWriterImpl());
 				agentService.insertAgent(agent);
 			} else {
 				String mensaje = "El usuario " + agent.getIdentificador()
@@ -151,7 +151,7 @@ public class Loader {
 				+ ", le informamos de que ha sido registrado correctamente en el sistema de participación ciudadana.\nSu nombre de usuario es: "
 				+ agent.getIdentificador();
 		for (DocsWriter writer : writers) {
-			writer.write(email);
+			writer.write(agent);
 		}
 	}
 
