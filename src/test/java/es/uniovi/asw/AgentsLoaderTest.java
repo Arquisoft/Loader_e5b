@@ -52,7 +52,7 @@ public class AgentsLoaderTest {
 		
     }
     
-    
+    /*
     @Test
     public void testBBDD() throws IOException, BusinessException { 
     	
@@ -73,6 +73,6 @@ public class AgentsLoaderTest {
 		assertEquals(citizens.size(), 3);
 		
 		citizenService.deleteAllAgents(citizens);	
-    }
+    }*/
     
 }
