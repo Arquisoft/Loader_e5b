@@ -103,12 +103,14 @@ import es.uniovi.asw.business.AgentService;
 import es.uniovi.asw.conf.ServicesFactory;
 import es.uniovi.asw.model.Agent;
 import es.uniovi.asw.model.exception.BusinessException;
+import es.uniovi.asw.parser.docsWriter.PdfWriterImpl;
 import es.uniovi.asw.parser.emailWriter.EmailWriter;
 import es.uniovi.asw.parser.emailWriter.TxtEmailWriter;
 import es.uniovi.asw.parser.reader.AgentsReader;
 import es.uniovi.asw.parser.reader.ExcelAgentsReader;
 import es.uniovi.asw.parser.reader.TextAgentsReader;
 import es.uniovi.asw.reportWriter.LogWriter;
+import es.uniovi.asw.parser.docsWriter.*;
 
 public class Loader {
 
@@ -131,12 +133,25 @@ public class Loader {
 		for (Agent agent : agents) {
 			if (!agentService.isAgentInDatabase(agent)) {
 				sendEmail(agent, new TxtEmailWriter());
+				generarDocs(agent,new DocsWriterImpl(),new PdfWriterImpl());
 				agentService.insertAgent(agent);
 			} else {
 				String mensaje = "El usuario " + agent.getIdentificador()
 						+ " ya está registrado.";
 				LogWriter.write(mensaje);
 			}
+		}
+	}
+	
+	public void generarDocs(Agent agent,DocsWriter...writers) throws IOException {
+		String email = "To "
+				+ agent.getEmail()
+				+ ":\nSaludos "
+				+ agent.getNombre()
+				+ ", le informamos de que ha sido registrado correctamente en el sistema de participación ciudadana.\nSu nombre de usuario es: "
+				+ agent.getIdentificador();
+		for (DocsWriter writer : writers) {
+			writer.write(email);
 		}
 	}
 
