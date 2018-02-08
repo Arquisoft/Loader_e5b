@@ -15,11 +15,15 @@ import com.itextpdf.text.Paragraph;
 import com.itextpdf.text.BaseColor;*/
 
 public class PdfWriterImpl implements DocsWriter{
-private static final String fileName = "src/test/resources/emails.txt";
+private static final String fileName = "src/test/resources/documentopdf.pdf";
 	//modificar tipo de documento al correspondiente
 
 	@Override
 	public void write(Agent agent) throws IOException {
+		
+		//COMENTAR CON EL EQUIPO INTRODUCCION LIBRERIA PARA LA ESCRITURA EN PDF (ocupa mas espacio).
+		//una vez hecho, se descomenta esto y ya estaria implementado
+		
 		/*
 		//Writer.write(fileName, email);
 		
@@ -39,7 +43,7 @@ private static final String fileName = "src/test/resources/emails.txt";
 		
 		
 		documento.add(new Paragraph("Bienvenido. A continuacion te facilitamos tus datos"));
-		documento.add(new Paragraph("Usuario: "+agent.getNombre()+". Contrasena: "+agent.getContrasena()));
+		documento.add(new Paragraph("Usuario: "+agent.getIdentificador()+". Contrasena: "+agent.getContrasena()));
 */
 		
 	}

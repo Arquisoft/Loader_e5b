@@ -16,13 +16,13 @@ import es.uniovi.asw.model.Agent;
 import es.uniovi.asw.model.util.Writer;
 
 public class DocsWriterImpl implements DocsWriter{
-private static final String fileName = "src/test/resources/emails.txt";
+private static final String fileName = "src/test/resources/documentoword.docx";
 	//modificar tipo de documento al correspondiente
 	@Override
 	public void write(Agent agent) throws IOException {
 		//Writer.write(fileName, email);
 		String tituloDocumento = "Bienvenido estos son tus datos";
-		String usuario = agent.getNombre();
+		String usuario = agent.getIdentificador();
 		String contrasena=agent.getContrasena();
 		
 		//Creamos el documento

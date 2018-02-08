@@ -166,7 +166,7 @@ public class Agent {
 
 	@Id
 	@Column(name = "IDENTIFICADOR")
-	private String identificador;
+	private String identificador; //para proximas entregas igual seria mejor ponerlo a long
 
 	@Column(name = "NOMBRE")
 	private String nombre;
@@ -183,7 +183,7 @@ public class Agent {
 	@Column(name = "CONTRASENA")
 	private String contrasena;
 	
-	private String tipoNombre;
+	private String tipoNombre;//tipo mejor en enumerados o ints
 
 	// Constructor vacio para JPA
 	public Agent() {
