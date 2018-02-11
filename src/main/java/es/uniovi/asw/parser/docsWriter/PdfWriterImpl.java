@@ -1,18 +1,8 @@
 package es.uniovi.asw.parser.docsWriter;
 
-import java.io.FileOutputStream;
 import java.io.IOException;
 
 import es.uniovi.asw.model.Agent;
-import es.uniovi.asw.model.util.Writer;
-/*
-import com.itextpdf.text.Document;
-import com.itextpdf.text.DocumentException;
-import com.itextpdf.text.pdf.PdfWriter;
-import com.itextpdf.text.Font;
-import com.itextpdf.text.FontFactory;
-import com.itextpdf.text.Paragraph;
-import com.itextpdf.text.BaseColor;*/
 
 public class PdfWriterImpl implements DocsWriter{
 private static final String fileName = "src/test/resources/documentopdf.pdf";

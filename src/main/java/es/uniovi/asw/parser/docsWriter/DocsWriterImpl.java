@@ -1,6 +1,5 @@
 package es.uniovi.asw.parser.docsWriter;
 
-import java.awt.Desktop;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -13,7 +12,6 @@ import org.apache.poi.xwpf.usermodel.XWPFParagraph;
 import org.apache.poi.xwpf.usermodel.XWPFRun;
 
 import es.uniovi.asw.model.Agent;
-import es.uniovi.asw.model.util.Writer;
 
 public class DocsWriterImpl implements DocsWriter{
 private static final String fileName = "src/test/resources/documentoword.docx";

@@ -5,9 +5,6 @@ import java.io.IOException;
 import java.util.List;
 import org.junit.Test;
 
-import es.uniovi.asw.business.AgentService;
-import es.uniovi.asw.business.CitizenService;
-import es.uniovi.asw.conf.ServicesFactory;
 import es.uniovi.asw.model.Agent;
 import es.uniovi.asw.model.exception.BusinessException;
 import es.uniovi.asw.parser.Loader;

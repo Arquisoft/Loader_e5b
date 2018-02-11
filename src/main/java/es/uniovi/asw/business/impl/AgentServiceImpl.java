@@ -3,7 +3,6 @@ package es.uniovi.asw.business.impl;
 import java.util.List;
 
 import es.uniovi.asw.business.AgentService;
-import es.uniovi.asw.business.CitizenService;
 import es.uniovi.asw.business.impl.citizen.AddAgent;
 import es.uniovi.asw.business.impl.citizen.DeleteAllAgents;
 import es.uniovi.asw.business.impl.citizen.FindAllAgents;

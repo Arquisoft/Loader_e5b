@@ -1,7 +1,6 @@
 package es.uniovi.asw.model.util;
 
 import java.io.IOException;
-import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
 
@@ -17,7 +16,6 @@ public class Type {
 			Map<String, String> mapa= loader.readTypes(path);
 			this.listaTipos= mapa;
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		

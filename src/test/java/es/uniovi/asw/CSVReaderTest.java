@@ -3,14 +3,11 @@ package es.uniovi.asw;
 import static org.junit.Assert.*;
 
 import java.io.IOException;
-import java.util.List;
 import java.util.Map;
 
 import org.junit.Test;
 
-import es.uniovi.asw.model.Agent;
 import es.uniovi.asw.model.exception.BusinessException;
-import es.uniovi.asw.parser.Loader;
 import es.uniovi.asw.parser.reader.CSVReader;
 
 public class CSVReaderTest {
