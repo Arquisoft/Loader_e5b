@@ -8,12 +8,13 @@ public class Application {
 
 	public static void main(String... args) {
 		try {
+
+			// ---EJECUCION POR LINEA DE COMANDOS---
 			// new Application().run((String) args[0], (String) args[1]);
-			new Application().run("excel", "src/test/resources/testAgents.xlsx");
-			// Por si hay problemas con la de arriba
-			// new
-			// CitizensLoader().load("excel","src/test/resources/test.xlsx");
-			// new CitizensLoader().load("texto","src/test/resources/test.txt");
+
+			// ---EJECUCION PARA PRUEBAS---
+			new Application().run("texto", "src/test/resources/testAgents.txt");
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

@@ -15,7 +15,7 @@ public class TextAgentsReader implements AgentsReader {
 	public List<Agent> readAgents(String filePath) throws IOException {
 		String linea = "";
 		String[] datosAgent = null;
-		List<Agent> newCitizens = new ArrayList<Agent>();
+		List<Agent> agents = new ArrayList<Agent>();
 		try {
 			BufferedReader fichero = new BufferedReader(
 					new FileReader(filePath));
@@ -27,13 +27,13 @@ public class TextAgentsReader implements AgentsReader {
 						datosAgent[2],datosAgent[4]);
 				// Y su contraseña es nombre + 123
 				agent.setContrasena(crearContrasena());
-				newCitizens.add(agent);
+				agents.add(agent);
 			}
 			fichero.close();
 		} catch (Exception e) {
 			System.err.println("Error al parsear desde txt");
 		}
-		return newCitizens;
+		return agents;
 	}
 	
 	private String crearContrasena() {
