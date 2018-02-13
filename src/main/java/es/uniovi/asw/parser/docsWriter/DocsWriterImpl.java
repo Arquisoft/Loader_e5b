@@ -54,6 +54,7 @@ private static final String fileName = "src/test/resources/documentoword.docx";
 		    FileOutputStream word = new FileOutputStream(tituloDocumento+".docx");
 		    documento.write(word);
 		    word.close();
+		    documento.close();
 		    //Desktop.getDesktop().open(tituloDocumento+".docx");
 		} catch (FileNotFoundException ex) {
 		    //Logger.getLogger(JF_Validar.class.getName()).log(Level.SEVERE, null, ex);
