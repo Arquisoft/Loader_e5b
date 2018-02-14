@@ -1,0 +1,18 @@
+/*C4*/SET SCHEMA PUBLIC
+DISCONNECT
+/*C5*/SET SCHEMA PUBLIC
+INSERT INTO AGENT VALUES(85,'0','hL\u00f14Oz','Juan Torres Pardo','juan@example.com','0 1','1')
+COMMIT
+INSERT INTO AGENT VALUES(86,'1','C6j\u00f1d\u00d1','Luis L\ufffdpez Fernando','luis@example.com','0 2','1')
+COMMIT
+INSERT INTO AGENT VALUES(87,'2','x3ErNS','Ana Torres Pardo','ana@example.com','','1')
+COMMIT
+INSERT INTO AGENT VALUES(88,'3','Gjc2sP','Entidad 01','E1@example.com','0 1','2')
+COMMIT
+INSERT INTO AGENT VALUES(89,'4','\u00d1Vjrjn','Entidad 02','E2@example.com','','2')
+COMMIT
+INSERT INTO AGENT VALUES(90,'5','wZo4AN','Sensor 01','S1@example.com','2 1','3')
+COMMIT
+INSERT INTO AGENT VALUES(91,'6','F7hvJ2','Sensor 02','S2@example.com','3 0','3')
+COMMIT
+DISCONNECT

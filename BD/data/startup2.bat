@@ -1,0 +1,1 @@
+java -classpath BD\\lib\\hsqldb.jar org.hsqldb.Server
