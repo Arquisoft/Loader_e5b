@@ -103,3 +103,10 @@ El usuario 3 ya está registrado.
 El usuario 4 ya está registrado.
 El usuario 5 ya está registrado.
 El usuario 6 ya está registrado.
+El usuario 0 ya está registrado.
+El usuario 1 ya está registrado.
+El usuario 2 ya está registrado.
+El usuario 3 ya está registrado.
+El usuario 4 ya está registrado.
+El usuario 5 ya está registrado.
+El usuario 6 ya está registrado.
