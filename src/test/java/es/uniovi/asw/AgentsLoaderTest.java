@@ -129,13 +129,13 @@ public class AgentsLoaderTest {
 	@Test
 	public void testBBDD() throws IOException, BusinessException {
 		
-		Process p = Runtime.getRuntime().exec("cmd /c start BD\\data\\startup3.bat");
+		/*Process p = Runtime.getRuntime().exec("sh BD\\data\\startup3.sh");
 	    try {
 			p.waitFor();
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
+		}*/
 
 		AgentService agentService = ServicesFactory.getAgentService();
 		List<Agent> agents = agentService.findAllAgents();

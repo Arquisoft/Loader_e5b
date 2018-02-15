@@ -6,4 +6,5 @@ after_success:
 before_script:
 - "export DISPLAY=:99.0"
 - "sh -e /etc/init.d/xvfb start"
+- "sh BD/data/startup3.sh"
 - sleep 3 # give xvfb some time to start
