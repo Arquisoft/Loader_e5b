@@ -25,8 +25,10 @@ public class Loader {
 	}
 
 	public void readList() throws IOException, BusinessException {
-		
+
 		List<Agent> agents = readAgents(formato, filePath);
+
+		agents = AgentValidator.getValidAgents(agents);
 
 		AgentService agentService = ServicesFactory.getAgentService();
 
@@ -35,38 +37,35 @@ public class Loader {
 		for (Agent agent : agents) {
 			if (!agentService.isAgentInDatabase(agent)) {
 				sendEmail(agent, new TxtEmailWriter());
-				//generarDocs(agent,new DocsWriterImpl(),new PdfWriterImpl());
+				// generarDocs(agent,new DocsWriterImpl(),new PdfWriterImpl());
 				agentService.insertAgent(agent);
 			} else {
-				String mensaje = "El usuario " + agent.getIdentificador()
-						+ " ya está registrado.";
+				String mensaje = "El usuario " + agent.getIdentificador() + " ya está registrado.";
 				LogWriter.write(mensaje);
 			}
 		}
 	}
-	
-//	public void generarDocs(Agent agent,DocsWriter...writers) throws IOException {
-//		String email = "To "
-//				+ agent.getEmail()
-//				+ ":\nSaludos "
-//				+ agent.getNombre()
-//				+ ", le informamos de que ha sido registrado correctamente en el sistema de participación ciudadana.\nSu nombre de usuario es: "
-//				+ agent.getIdentificador();
-//		for (DocsWriter writer : writers) {
-//			writer.write(agent);
-//		}
-//	}
+
+	// public void generarDocs(Agent agent,DocsWriter...writers) throws
+	// IOException {
+	// String email = "To "
+	// + agent.getEmail()
+	// + ":\nSaludos "
+	// + agent.getNombre()
+	// + ", le informamos de que ha sido registrado correctamente en el sistema
+	// de participación ciudadana.\nSu nombre de usuario es: "
+	// + agent.getIdentificador();
+	// for (DocsWriter writer : writers) {
+	// writer.write(agent);
+	// }
+	// }
 
 	public List<Agent> readAgents(String formato, String filePath) throws IOException {
 		return getReader(formato).readAgents(filePath);
 	}
 
-	private void sendEmail(Agent agent, EmailWriter... writers)
-			throws IOException {
-		String email = "To "
-				+ agent.getEmail()
-				+ ":\nSaludos "
-				+ agent.getNombre()
+	private void sendEmail(Agent agent, EmailWriter... writers) throws IOException {
+		String email = "To " + agent.getEmail() + ":\nSaludos " + agent.getNombre()
 				+ ", le informamos de que ha sido registrado correctamente en el sistema de participación ciudadana.\nSu nombre de usuario es: "
 				+ agent.getIdentificador();
 		for (EmailWriter writer : writers) {
@@ -94,16 +93,12 @@ public class Loader {
 	public String getFilePath() {
 		return filePath;
 	}
-	
-	
-	
+
 	private void printAgents(List<Agent> agents, String filePath) {
-		System.out.println("Estos son los agentes presentes en el fichero "
-				+ filePath + ":");
+		System.out.println("Estos son los agentes presentes en el fichero " + filePath + ":");
 		for (Agent agent : agents) {
 			System.out.println(agent);
 		}
 	}
-	
 
 }

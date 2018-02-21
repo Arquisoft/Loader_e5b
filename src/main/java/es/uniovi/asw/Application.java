@@ -25,16 +25,15 @@ public class Application {
 		Loader loader = new Loader(formato, filePath);
 		loader.readList();
 	}
-	
+
 	public static void cargarBaseDatos() {
 		Process p;
 		try {
 			p = Runtime.getRuntime().exec("cmd /c start BD\\data\\startup3.bat");
 		} catch (IOException e1) {
-			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
-	   
+
 	}
 
 }

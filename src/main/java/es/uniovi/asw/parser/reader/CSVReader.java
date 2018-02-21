@@ -19,7 +19,7 @@ public class CSVReader {
 	public Map<String,String> readTypes(String filePath) throws IOException {
 		String linea = "";
 		String[] datos = null;
-		Map<String,String> lista = new HashMap<String,String>();
+		Map<String,String> mapa = new HashMap<String,String>();
 		try {
 			BufferedReader fichero = new BufferedReader(
 					new FileReader(filePath));
@@ -27,13 +27,13 @@ public class CSVReader {
 				linea = fichero.readLine();
 				datos = linea.split(",");
 				
-				lista.put(datos[0], datos[1]);
+				mapa.put(datos[0], datos[1]);
 			}
 			fichero.close();
 		} catch (Exception e) {
 			System.err.println("Error al parsear desde csv");
 		}
-		return lista;
+		return mapa;
 	}
 
 }
