@@ -2,7 +2,6 @@ package es.uniovi.asw.parser;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -11,16 +10,9 @@ import es.uniovi.asw.parser.reader.CSVReader;
 
 public class AgentValidator {
 
-	public static List<Agent> getValidAgents(List<Agent> inputAgents) {
+	public static List<Agent> getValidAgents(List<Agent> inputAgents, String kindFilepath) throws IOException {
 
-		//FILEPATH HARDCODED hay que decidir como procedemos con el path del fichero de tipos
-		
-		Map<String, String> kindMap = new HashMap<String, String>();
-		try {
-			kindMap = new CSVReader().readTypes("src/test/resources/testAgentKind.csv");
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+		Map<String, String> kindMap = new CSVReader().readTypes(kindFilepath);
 		ArrayList<Agent> validAgents = new ArrayList<Agent>();
 		
 		for(Agent agent: inputAgents){
@@ -36,7 +28,6 @@ public class AgentValidator {
 			return false;
 		if (kindMap.get(agent.getTipo()).equals("Sensor") && agent.getLocalizacion().equals(""))
 			return false;
-
 		return true;
 	}
 
@@ -46,7 +37,6 @@ public class AgentValidator {
 			return false;
 		if (agent.getTipo() == "")
 			return false;
-
 		return true;
 	}
 }

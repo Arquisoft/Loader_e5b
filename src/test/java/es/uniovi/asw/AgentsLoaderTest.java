@@ -16,7 +16,7 @@ public class AgentsLoaderTest {
 	@Test
 	public void testLoadFromTxt() throws IOException, BusinessException {
 
-		Loader loader = new Loader("texto", "src/test/resources/testAgents.txt");
+		Loader loader = new Loader("texto", "src/test/resources/testAgents.txt", "src/test/resources/testAgentKind.csv");
 		List<Agent> agents = loader.readAgents(loader.getFormato(), loader.getFilePath());
 		assertEquals(7, agents.size());
 
@@ -72,7 +72,7 @@ public class AgentsLoaderTest {
 
 	@Test
 	public void testLoadFromExcel() throws IOException, BusinessException {
-		Loader loader = new Loader("excel", "src/test/resources/testAgents.xlsx");
+		Loader loader = new Loader("excel", "src/test/resources/testAgents.xlsx", "src/test/resources/testAgentKind.csv");
 		List<Agent> agents = loader.readAgents(loader.getFormato(), loader.getFilePath());
 		assertEquals(7, agents.size());
 
@@ -128,20 +128,12 @@ public class AgentsLoaderTest {
 
 	@Test
 	public void testBBDD() throws IOException, BusinessException {
-		
-		/*Process p = Runtime.getRuntime().exec("sh BD\\data\\startup3.sh");
-	    try {
-			p.waitFor();
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}*/
 
 		AgentService agentService = ServicesFactory.getAgentService();
 		List<Agent> agents = agentService.findAllAgents();
 		agentService.deleteAllAgents(agents);
 
-		Loader loader = new Loader("excel", "src/test/resources/testAgents.xlsx");
+		Loader loader = new Loader("excel", "src/test/resources/testAgents.xlsx", "src/test/resources/testAgentKind.csv");
 
 		// Load and send emails to all of the new Citizens
 		loader.readList();

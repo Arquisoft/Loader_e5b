@@ -18,17 +18,19 @@ public class Loader {
 
 	private String formato;
 	private String filePath;
+	private String kindFilepath;
 
-	public Loader(String formato, String filePath) {
+	public Loader(String formato, String filePath, String kindFilepath) {
 		this.formato = formato;
 		this.filePath = filePath;
+		this.kindFilepath = kindFilepath;
 	}
 
 	public void readList() throws IOException, BusinessException {
 
 		List<Agent> agents = readAgents(formato, filePath);
 
-		agents = AgentValidator.getValidAgents(agents);
+		agents = AgentValidator.getValidAgents(agents, kindFilepath);
 
 		AgentService agentService = ServicesFactory.getAgentService();
 
