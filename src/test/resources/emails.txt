@@ -439,3 +439,153 @@ Su nombre de usuario es: 5
 To S2@example.com:
 Saludos Sensor 02, le informamos de que ha sido registrado correctamente en el sistema de participaci贸n ciudadana.
 Su nombre de usuario es: 6
+<<<<<<< HEAD
+=======
+To juan@example.com:
+Saludos Juan Torres Pardo, le informamos de que ha sido registrado correctamente en el sistema de participaci贸n ciudadana.
+Su nombre de usuario es: 0
+To luis@example.com:
+Saludos Luis L贸pez Fernando, le informamos de que ha sido registrado correctamente en el sistema de participaci贸n ciudadana.
+Su nombre de usuario es: 1
+To ana@example.com:
+Saludos Ana Torres Pardo, le informamos de que ha sido registrado correctamente en el sistema de participaci贸n ciudadana.
+Su nombre de usuario es: 2
+To E1@example.com:
+Saludos Entidad 01, le informamos de que ha sido registrado correctamente en el sistema de participaci贸n ciudadana.
+Su nombre de usuario es: 3
+To E2@example.com:
+Saludos Entidad 02, le informamos de que ha sido registrado correctamente en el sistema de participaci贸n ciudadana.
+Su nombre de usuario es: 4
+To S1@example.com:
+Saludos Sensor 01, le informamos de que ha sido registrado correctamente en el sistema de participaci贸n ciudadana.
+Su nombre de usuario es: 5
+To S2@example.com:
+Saludos Sensor 02, le informamos de que ha sido registrado correctamente en el sistema de participaci贸n ciudadana.
+Su nombre de usuario es: 6
+To juan@example.com:
+Saludos Juan Torres Pardo, le informamos de que ha sido registrado correctamente en el sistema de participaci贸n ciudadana.
+Su nombre de usuario es: 0
+To luis@example.com:
+Saludos Luis L贸pez Fernando, le informamos de que ha sido registrado correctamente en el sistema de participaci贸n ciudadana.
+Su nombre de usuario es: 1
+To ana@example.com:
+Saludos Ana Torres Pardo, le informamos de que ha sido registrado correctamente en el sistema de participaci贸n ciudadana.
+Su nombre de usuario es: 2
+To E1@example.com:
+Saludos Entidad 01, le informamos de que ha sido registrado correctamente en el sistema de participaci贸n ciudadana.
+Su nombre de usuario es: 3
+To E2@example.com:
+Saludos Entidad 02, le informamos de que ha sido registrado correctamente en el sistema de participaci贸n ciudadana.
+Su nombre de usuario es: 4
+To S1@example.com:
+Saludos Sensor 01, le informamos de que ha sido registrado correctamente en el sistema de participaci贸n ciudadana.
+Su nombre de usuario es: 5
+To S2@example.com:
+Saludos Sensor 02, le informamos de que ha sido registrado correctamente en el sistema de participaci贸n ciudadana.
+Su nombre de usuario es: 6
+To juan@example.com:
+Saludos Juan Torres Pardo, le informamos de que ha sido registrado correctamente en el sistema de participaci贸n ciudadana.
+Su nombre de usuario es: 0
+To luis@example.com:
+Saludos Luis L贸pez Fernando, le informamos de que ha sido registrado correctamente en el sistema de participaci贸n ciudadana.
+Su nombre de usuario es: 1
+To ana@example.com:
+Saludos Ana Torres Pardo, le informamos de que ha sido registrado correctamente en el sistema de participaci贸n ciudadana.
+Su nombre de usuario es: 2
+To E1@example.com:
+Saludos Entidad 01, le informamos de que ha sido registrado correctamente en el sistema de participaci贸n ciudadana.
+Su nombre de usuario es: 3
+To E2@example.com:
+Saludos Entidad 02, le informamos de que ha sido registrado correctamente en el sistema de participaci贸n ciudadana.
+Su nombre de usuario es: 4
+To S1@example.com:
+Saludos Sensor 01, le informamos de que ha sido registrado correctamente en el sistema de participaci贸n ciudadana.
+Su nombre de usuario es: 5
+To S2@example.com:
+Saludos Sensor 02, le informamos de que ha sido registrado correctamente en el sistema de participaci贸n ciudadana.
+Su nombre de usuario es: 6
+To juan@example.com:
+Saludos Juan Torres Pardo, le informamos de que ha sido registrado correctamente en el sistema de participaci贸n ciudadana.
+Su nombre de usuario es: 0
+To luis@example.com:
+Saludos Luis L贸pez Fernando, le informamos de que ha sido registrado correctamente en el sistema de participaci贸n ciudadana.
+Su nombre de usuario es: 1
+To ana@example.com:
+Saludos Ana Torres Pardo, le informamos de que ha sido registrado correctamente en el sistema de participaci贸n ciudadana.
+Su nombre de usuario es: 2
+To E1@example.com:
+Saludos Entidad 01, le informamos de que ha sido registrado correctamente en el sistema de participaci贸n ciudadana.
+Su nombre de usuario es: 3
+To E2@example.com:
+Saludos Entidad 02, le informamos de que ha sido registrado correctamente en el sistema de participaci贸n ciudadana.
+Su nombre de usuario es: 4
+To S1@example.com:
+Saludos Sensor 01, le informamos de que ha sido registrado correctamente en el sistema de participaci贸n ciudadana.
+Su nombre de usuario es: 5
+To S2@example.com:
+Saludos Sensor 02, le informamos de que ha sido registrado correctamente en el sistema de participaci贸n ciudadana.
+Su nombre de usuario es: 6
+To juan@example.com:
+Saludos Juan Torres Pardo, le informamos de que ha sido registrado correctamente en el sistema de participaci贸n ciudadana.
+Su nombre de usuario es: 0
+To luis@example.com:
+Saludos Luis L贸pez Fernando, le informamos de que ha sido registrado correctamente en el sistema de participaci贸n ciudadana.
+Su nombre de usuario es: 1
+To ana@example.com:
+Saludos Ana Torres Pardo, le informamos de que ha sido registrado correctamente en el sistema de participaci贸n ciudadana.
+Su nombre de usuario es: 2
+To E1@example.com:
+Saludos Entidad 01, le informamos de que ha sido registrado correctamente en el sistema de participaci贸n ciudadana.
+Su nombre de usuario es: 3
+To E2@example.com:
+Saludos Entidad 02, le informamos de que ha sido registrado correctamente en el sistema de participaci贸n ciudadana.
+Su nombre de usuario es: 4
+To S1@example.com:
+Saludos Sensor 01, le informamos de que ha sido registrado correctamente en el sistema de participaci贸n ciudadana.
+Su nombre de usuario es: 5
+To S2@example.com:
+Saludos Sensor 02, le informamos de que ha sido registrado correctamente en el sistema de participaci贸n ciudadana.
+Su nombre de usuario es: 6
+To juan@example.com:
+Saludos Juan Torres Pardo, le informamos de que ha sido registrado correctamente en el sistema de participaci贸n ciudadana.
+Su nombre de usuario es: 0
+To luis@example.com:
+Saludos Luis L贸pez Fernando, le informamos de que ha sido registrado correctamente en el sistema de participaci贸n ciudadana.
+Su nombre de usuario es: 1
+To ana@example.com:
+Saludos Ana Torres Pardo, le informamos de que ha sido registrado correctamente en el sistema de participaci贸n ciudadana.
+Su nombre de usuario es: 2
+To E1@example.com:
+Saludos Entidad 01, le informamos de que ha sido registrado correctamente en el sistema de participaci贸n ciudadana.
+Su nombre de usuario es: 3
+To E2@example.com:
+Saludos Entidad 02, le informamos de que ha sido registrado correctamente en el sistema de participaci贸n ciudadana.
+Su nombre de usuario es: 4
+To S1@example.com:
+Saludos Sensor 01, le informamos de que ha sido registrado correctamente en el sistema de participaci贸n ciudadana.
+Su nombre de usuario es: 5
+To S2@example.com:
+Saludos Sensor 02, le informamos de que ha sido registrado correctamente en el sistema de participaci贸n ciudadana.
+Su nombre de usuario es: 6
+To juan@example.com:
+Saludos Juan Torres Pardo, le informamos de que ha sido registrado correctamente en el sistema de participaci髇 ciudadana.
+Su nombre de usuario es: 0
+To luis@example.com:
+Saludos Luis L髉ez Fernando, le informamos de que ha sido registrado correctamente en el sistema de participaci髇 ciudadana.
+Su nombre de usuario es: 1
+To ana@example.com:
+Saludos Ana Torres Pardo, le informamos de que ha sido registrado correctamente en el sistema de participaci髇 ciudadana.
+Su nombre de usuario es: 2
+To E1@example.com:
+Saludos Entidad 01, le informamos de que ha sido registrado correctamente en el sistema de participaci髇 ciudadana.
+Su nombre de usuario es: 3
+To E2@example.com:
+Saludos Entidad 02, le informamos de que ha sido registrado correctamente en el sistema de participaci髇 ciudadana.
+Su nombre de usuario es: 4
+To S1@example.com:
+Saludos Sensor 01, le informamos de que ha sido registrado correctamente en el sistema de participaci髇 ciudadana.
+Su nombre de usuario es: 5
+To S2@example.com:
+Saludos Sensor 02, le informamos de que ha sido registrado correctamente en el sistema de participaci髇 ciudadana.
+Su nombre de usuario es: 6
+>>>>>>> 9cfda3ce868eb90ced4c25569b03419b7bd73b65
