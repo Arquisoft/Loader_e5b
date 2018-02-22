@@ -128,6 +128,12 @@ public class AgentsLoaderTest {
 
 	@Test
 	public void testBBDD() throws IOException, BusinessException {
+		
+		try {
+			Runtime.getRuntime().exec("cmd /c start BD\\data\\startup4.bat");
+		} catch (IOException e1) {
+			e1.printStackTrace();
+		}
 
 		AgentService agentService = ServicesFactory.getAgentService();
 		List<Agent> agents = agentService.findAllAgents();
