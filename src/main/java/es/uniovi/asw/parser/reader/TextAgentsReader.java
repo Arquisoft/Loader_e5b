@@ -1,6 +1,7 @@
 package es.uniovi.asw.parser.reader;
 
 import java.io.BufferedReader;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -30,6 +31,14 @@ public class TextAgentsReader implements AgentsReader {
 				agents.add(agent);
 			}
 			fichero.close();
+		}
+		
+		catch(FileNotFoundException e) {
+			System.out.println("Archivo no encontrado");
+		}
+
+		catch(IOException e) {
+			System.out.println("Error en la lectura del archivo");
 		}
 		
 		

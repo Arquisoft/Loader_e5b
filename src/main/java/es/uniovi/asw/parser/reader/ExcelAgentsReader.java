@@ -2,6 +2,7 @@ package es.uniovi.asw.parser.reader;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -19,7 +20,11 @@ public class ExcelAgentsReader implements AgentsReader {
 
 	@Override
 	public List<Agent> readAgents(String filePath) throws IOException {
+		
+		
 		List<Agent> agents = new ArrayList<Agent>();
+		
+		try {
 		File file = new File(filePath);
 		FileInputStream inputStream = new FileInputStream(file);
 
@@ -64,6 +69,19 @@ public class ExcelAgentsReader implements AgentsReader {
 		inputStream.close();
 
 		return agents;
+		}
+		
+		catch(FileNotFoundException e) {
+			System.out.println("Archivo no encontrado");
+		}
+
+		catch(IOException e) {
+			System.out.println("Error en la lectura del archivo");
+		}catch(Exception e) {
+			System.out.println("error capturado con Exception");
+		}
+		return null;
 	}
+	
 
 }
