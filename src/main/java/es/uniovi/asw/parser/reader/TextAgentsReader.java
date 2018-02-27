@@ -30,7 +30,11 @@ public class TextAgentsReader implements AgentsReader {
 				agents.add(agent);
 			}
 			fichero.close();
-		} catch (Exception e) {
+		}
+		
+		
+		
+		catch (Exception e) {
 			System.err.println("Error al parsear desde txt");
 		}
 		return agents;
