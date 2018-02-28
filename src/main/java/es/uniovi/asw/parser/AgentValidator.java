@@ -10,6 +10,7 @@ import es.uniovi.asw.parser.reader.CSVReader;
 
 public class AgentValidator {
 
+	
 	public static List<Agent> getValidAgents(List<Agent> inputAgents, String kindFilepath) throws IOException {
 
 		Map<String, String> kindMap = new CSVReader().readTypes(kindFilepath);
