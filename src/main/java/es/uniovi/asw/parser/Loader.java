@@ -25,7 +25,11 @@ public class Loader {
 		this.filePath = filePath;
 		this.kindFilepath = kindFilepath;
 	}
-
+/**
+ * Lee todos los agentes, los valida y genera los correspondientes emails, docs o guarda en el registro del programa
+ * @throws IOException
+ * @throws BusinessException
+ */
 	public void readList() throws IOException, BusinessException {
 
 		List<Agent> agents = readAgents(formato, filePath);

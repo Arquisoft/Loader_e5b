@@ -10,7 +10,13 @@ import es.uniovi.asw.parser.reader.CSVReader;
 
 public class AgentValidator {
 
-	
+	/**
+	 * Método para validar los agentes de la lista que se pasa por parametro
+	 * @param inputAgents
+	 * @param kindFilepath
+	 * @return
+	 * @throws IOException
+	 */
 	public static List<Agent> getValidAgents(List<Agent> inputAgents, String kindFilepath) throws IOException {
 
 		Map<String, String> kindMap = new CSVReader().readTypes(kindFilepath);
@@ -23,6 +29,14 @@ public class AgentValidator {
 		return validAgents;
 	}
 
+	
+	/**
+	 * Comprueba la consistencia de los agentes
+	 * Si es un agente tipo sensor debe llevar localizacion
+	 * @param agent
+	 * @param kindMap
+	 * @return
+	 */
 	private static boolean checkAgentKindFields(Agent agent, Map<String, String> kindMap) {
 
 		if (!kindMap.containsKey(agent.getTipo()))
@@ -32,6 +46,12 @@ public class AgentValidator {
 		return true;
 	}
 
+	
+	/**
+	 * Comprueba campos vacios
+	 * @param agent
+	 * @return
+	 */
 	public static boolean checkAgentFields(Agent agent) {
 
 		if (agent.getIdentificador() == "")
